@@ -1,3 +1,0 @@
-/home/pilzhere/CPPProjects/RayGame3/build/CMakeFiles/rebuild_cache.dir
-/home/pilzhere/CPPProjects/RayGame3/build/CMakeFiles/edit_cache.dir
-/home/pilzhere/CPPProjects/RayGame3/build/CMakeFiles/RayGame3.dir

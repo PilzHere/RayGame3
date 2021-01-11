@@ -1,7 +1,0 @@
-# ninja log v5
-340	403	1610381936760123396	unix/release/RayGame3	44fba12d504ec692
-0	40	1610381936396784463	CMakeFiles/RayGame3.dir/src/main.cpp.o	56393401c09a225d
-1	340	1610381936696789086	CMakeFiles/RayGame3.dir/src/game/Game.cpp.o	a48aede8a9247934
-1	325	1610381936683455547	CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o	ba271b1dbfc93d30
-1	315	1610381936673455393	CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o	9f6a2950be0ec878
-329	397	1610381929716681935	unix/debug/RayGame3	3adf0290d58a9ffa
