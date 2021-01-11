@@ -50,7 +50,7 @@ add_executable(RayGame3 src/main.cpp src/game/Game.cpp src/game/screen/GameScree
 # Extra options deppending on OS.
 if(WIN32)
     # Don't display console window when running release.exe.
-    target_link_options(target PRIVATE "/SUBSYSTEM:WINDOWS" "/ENTRY:mainCRTStartup")
+    target_link_options(RayGame3 PRIVATE "/SUBSYSTEM:WINDOWS" "/ENTRY:mainCRTStartup")
 endif()
 
 # Set directories to include (.hpp files folder).
