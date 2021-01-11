@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: RayGame3
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Release
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -33,30 +33,6 @@ CONFIGURATION = Release
 # Include rules file.
 
 include CMakeFiles/rules.ninja
-
-
-#############################################
-# Utility command for edit_cache
-
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/pilzhere/CPPProjects/RayGame3/build && /usr/bin/cmake-gui -S/home/pilzhere/CPPProjects/RayGame3 -B/home/pilzhere/CPPProjects/RayGame3/build
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build edit_cache: phony CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for package_source
-
-build CMakeFiles/package_source.util: CUSTOM_COMMAND
-  COMMAND = cd /home/pilzhere/CPPProjects/RayGame3/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/pilzhere/CPPProjects/RayGame3/build/CPackSourceConfig.cmake
-  DESC = Run CPack packaging tool for source...
-  pool = console
-  restat = 1
-
-build package_source: phony CMakeFiles/package_source.util
 
 
 #############################################
@@ -72,15 +48,15 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 
 #############################################
-# Utility command for package
+# Utility command for edit_cache
 
-build CMakeFiles/package.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/pilzhere/CPPProjects/RayGame3/build && /usr/bin/cpack --config ./CPackConfig.cmake
-  DESC = Run CPack packaging tool...
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/pilzhere/CPPProjects/RayGame3/build && /usr/bin/cmake-gui -S/home/pilzhere/CPPProjects/RayGame3 -B/home/pilzhere/CPPProjects/RayGame3/build
+  DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build package: phony CMakeFiles/package.util
+build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
 # Object build statements for EXECUTABLE target RayGame3
@@ -91,30 +67,30 @@ build package: phony CMakeFiles/package.util
 
 build cmake_object_order_depends_target_RayGame3: phony || CMakeFiles/RayGame3.dir
 
-build CMakeFiles/RayGame3.dir/src/main.cpp.o: CXX_COMPILER__RayGame3_Release ../src/main.cpp || cmake_object_order_depends_target_RayGame3
+build CMakeFiles/RayGame3.dir/src/main.cpp.o: CXX_COMPILER__RayGame3_Debug ../src/main.cpp || cmake_object_order_depends_target_RayGame3
   DEP_FILE = CMakeFiles/RayGame3.dir/src/main.cpp.o.d
-  FLAGS = -Wall -Wextra -m64 -O3 -std=gnu++14
+  FLAGS = -Wall -Wextra -m64 -g -std=gnu++14
   INCLUDES = -I../include
   OBJECT_DIR = CMakeFiles/RayGame3.dir
   OBJECT_FILE_DIR = CMakeFiles/RayGame3.dir/src
 
-build CMakeFiles/RayGame3.dir/src/game/Game.cpp.o: CXX_COMPILER__RayGame3_Release ../src/game/Game.cpp || cmake_object_order_depends_target_RayGame3
+build CMakeFiles/RayGame3.dir/src/game/Game.cpp.o: CXX_COMPILER__RayGame3_Debug ../src/game/Game.cpp || cmake_object_order_depends_target_RayGame3
   DEP_FILE = CMakeFiles/RayGame3.dir/src/game/Game.cpp.o.d
-  FLAGS = -Wall -Wextra -m64 -O3 -std=gnu++14
+  FLAGS = -Wall -Wextra -m64 -g -std=gnu++14
   INCLUDES = -I../include
   OBJECT_DIR = CMakeFiles/RayGame3.dir
   OBJECT_FILE_DIR = CMakeFiles/RayGame3.dir/src/game
 
-build CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o: CXX_COMPILER__RayGame3_Release ../src/game/screen/GameScreen.cpp || cmake_object_order_depends_target_RayGame3
+build CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o: CXX_COMPILER__RayGame3_Debug ../src/game/screen/GameScreen.cpp || cmake_object_order_depends_target_RayGame3
   DEP_FILE = CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o.d
-  FLAGS = -Wall -Wextra -m64 -O3 -std=gnu++14
+  FLAGS = -Wall -Wextra -m64 -g -std=gnu++14
   INCLUDES = -I../include
   OBJECT_DIR = CMakeFiles/RayGame3.dir
   OBJECT_FILE_DIR = CMakeFiles/RayGame3.dir/src/game/screen
 
-build CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o: CXX_COMPILER__RayGame3_Release ../src/game/screen/PlayScreen.cpp || cmake_object_order_depends_target_RayGame3
+build CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o: CXX_COMPILER__RayGame3_Debug ../src/game/screen/PlayScreen.cpp || cmake_object_order_depends_target_RayGame3
   DEP_FILE = CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o.d
-  FLAGS = -Wall -Wextra -m64 -O3 -std=gnu++14
+  FLAGS = -Wall -Wextra -m64 -g -std=gnu++14
   INCLUDES = -I../include
   OBJECT_DIR = CMakeFiles/RayGame3.dir
   OBJECT_FILE_DIR = CMakeFiles/RayGame3.dir/src/game/screen
@@ -125,21 +101,21 @@ build CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o: CXX_COMPILER__Ra
 
 
 #############################################
-# Link the executable unix/release/RayGame3
+# Link the executable unix/debug/RayGame3
 
-build unix/release/RayGame3: CXX_EXECUTABLE_LINKER__RayGame3_Release CMakeFiles/RayGame3.dir/src/main.cpp.o CMakeFiles/RayGame3.dir/src/game/Game.cpp.o CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o | /usr/local/lib64/libraylib.so
-  FLAGS = -Wall -Wextra -m64 -O3
+build unix/debug/RayGame3: CXX_EXECUTABLE_LINKER__RayGame3_Debug CMakeFiles/RayGame3.dir/src/main.cpp.o CMakeFiles/RayGame3.dir/src/game/Game.cpp.o CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o | /usr/local/lib64/libraylib.so
+  FLAGS = -Wall -Wextra -m64 -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib64  /usr/local/lib64/libraylib.so  -lraylib
   OBJECT_DIR = CMakeFiles/RayGame3.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = unix/release/RayGame3
+  TARGET_FILE = unix/debug/RayGame3
   TARGET_PDB = RayGame3.dbg
 
 # =============================================================================
 # Target aliases.
 
-build RayGame3: phony unix/release/RayGame3
+build RayGame3: phony unix/debug/RayGame3
 
 # =============================================================================
 # Folder targets.
@@ -149,7 +125,7 @@ build RayGame3: phony unix/release/RayGame3
 #############################################
 # Folder: /home/pilzhere/CPPProjects/RayGame3/build
 
-build all: phony unix/release/RayGame3
+build all: phony unix/debug/RayGame3
 
 # =============================================================================
 # Built-in targets
