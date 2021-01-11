@@ -27,7 +27,7 @@ if(UNIX)
     set(CMAKE_CXX_FLAGS_RELEASE "-m64 -O3")
 elseif(WIN32)
     set(CMAKE_CXX_FLAGS_DEBUG "-m64 -g")
-    set(CMAKE_CXX_FLAGS_RELEASE "-m64 -O3 -mwindows")
+    set(CMAKE_CXX_FLAGS_RELEASE "-m64 -O3")
 endif()
 
 # Download raylib from github.
@@ -50,6 +50,13 @@ if (NOT raylib_POPULATED)
 endif ()
 
 add_executable(RayGame3 src/main.cpp src/game/Game.cpp src/game/screen/GameScreen.cpp src/game/screen/PlayScreen.cpp)
+
+if(WIN32)
+    if(CMAKE_BUILD_TYPE MATCHES Release)
+        # Dont display console
+        target_link_options(target PRIVATE "/SUBSYSTEM:WINDOWS" "/ENTRY:mainCRTStartup")
+    endif()
+endif()
 
 target_include_directories(RayGame3 PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(RayGame3 raylib)
