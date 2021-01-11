@@ -1,10 +1,12 @@
 # ninja log v5
-339	430	1610377080089832867	release/RayGame3	18c7a40a40e72038
-1	311	1610377079969830607	CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o	ba271b1dbfc93d30
-3	349	1610332818719645926	CMakeFiles/RayGame3.dir/src/screen/GameScreen.cpp.o	a0023964735ef7b3
-312	384	1610374982372617866	RayGame3	3d981183ae91bd68
-0	284	1610330040536730062	CMakeFiles/RayGame3.dir/src/obj/GameScreen.cpp.o	a08e83989f6a53b5
-0	36	1610377079696492125	CMakeFiles/RayGame3.dir/src/main.cpp.o	56393401c09a225d
-1	339	1610377079999831172	CMakeFiles/RayGame3.dir/src/game/Game.cpp.o	a48aede8a9247934
-1	336	1610377079996497776	CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o	9f6a2950be0ec878
+322	390	1610380586152434028	unix/release/RayGame3	44fba12d504ec692
 317	391	1610377061832822650	debug/RayGame3	70e07afcc3fd5019
+1	316	1610380586075765115	CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o	9f6a2950be0ec878
+1	320	1610380586082431977	CMakeFiles/RayGame3.dir/src/game/Game.cpp.o	a48aede8a9247934
+1	31	1610380585792423480	CMakeFiles/RayGame3.dir/src/main.cpp.o	56393401c09a225d
+0	284	1610330040536730062	CMakeFiles/RayGame3.dir/src/obj/GameScreen.cpp.o	a08e83989f6a53b5
+312	384	1610374982372617866	RayGame3	3d981183ae91bd68
+328	395	1610380505890063586	unix/debug/RayGame3	3adf0290d58a9ffa
+3	349	1610332818719645926	CMakeFiles/RayGame3.dir/src/screen/GameScreen.cpp.o	a0023964735ef7b3
+1	322	1610380586082431977	CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o	ba271b1dbfc93d30
+339	430	1610377080089832867	release/RayGame3	18c7a40a40e72038

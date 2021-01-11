@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
 project(RayGame3)
 
+# Linux machine uses installed raylib.
+# Windows machine downloads from github.
 if(UNIX)
     find_package(raylib 3.5.0 REQUIRED)
 endif()

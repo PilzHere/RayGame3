@@ -1,22 +1,22 @@
 [
 {
   "directory": "/home/pilzhere/CPPProjects/RayGame3/build",
-  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -g -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/main.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/main.cpp",
+  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -O3 -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/main.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/main.cpp",
   "file": "/home/pilzhere/CPPProjects/RayGame3/src/main.cpp"
 },
 {
   "directory": "/home/pilzhere/CPPProjects/RayGame3/build",
-  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -g -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/game/Game.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/game/Game.cpp",
+  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -O3 -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/game/Game.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/game/Game.cpp",
   "file": "/home/pilzhere/CPPProjects/RayGame3/src/game/Game.cpp"
 },
 {
   "directory": "/home/pilzhere/CPPProjects/RayGame3/build",
-  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -g -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/game/screen/GameScreen.cpp",
+  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -O3 -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/game/screen/GameScreen.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/game/screen/GameScreen.cpp",
   "file": "/home/pilzhere/CPPProjects/RayGame3/src/game/screen/GameScreen.cpp"
 },
 {
   "directory": "/home/pilzhere/CPPProjects/RayGame3/build",
-  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -g -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/game/screen/PlayScreen.cpp",
+  "command": "/bin/g++ -I../include -Wall -Wextra -m64 -O3 -std=gnu++14 -o CMakeFiles/RayGame3.dir/src/game/screen/PlayScreen.cpp.o -c /home/pilzhere/CPPProjects/RayGame3/src/game/screen/PlayScreen.cpp",
   "file": "/home/pilzhere/CPPProjects/RayGame3/src/game/screen/PlayScreen.cpp"
 }
 ]
