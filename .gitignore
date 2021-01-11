@@ -33,3 +33,7 @@
 
 # Custom
 CMakeCache.txt
+build/unix/debug/*
+build/unix/release/*
+build/windows/debug/*
+build/windows/release/*
