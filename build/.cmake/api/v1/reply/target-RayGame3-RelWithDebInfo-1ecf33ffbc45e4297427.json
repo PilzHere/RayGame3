@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "unix/release/RayGame3"
+			"path" : "RelWithDebInfo/RayGame3.exe"
+		},
+		{
+			"path" : "RelWithDebInfo/RayGame3.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -49,28 +52,43 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-Wall -Wextra -m64 -O3"
+					"fragment" : "-Wall /Zi /O2 /Ob1 /DNDEBUG -MD"
 				},
 				{
-					"fragment" : "-std=gnu++14"
+					"fragment" : "-std:c++14"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "GRAPHICS=GRAPHICS_API_OPENGL_33"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "GRAPHICS_API_OPENGL_33"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PLATFORM=PLATFORM_DESKTOP"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PLATFORM_DESKTOP"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/pilzhere/CPPProjects/RayGame3/include"
+					"path" : "C:/Users/pilzm/CPPProjects/RayGame3/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/pilzm/CPPProjects/RayGame3/build/_deps/raylib-build/src"
 				}
 			],
 			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "14"
-			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -80,37 +98,55 @@
 			]
 		}
 	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "raylib_static::@f4b2dc624ea7d2ec5851"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "glfw::@f6fbbe97f981490d87fe"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
 	"id" : "RayGame3::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Wall -Wextra -m64 -O3",
+				"fragment" : "-Wall /Zi /O2 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-Wl,-rpath,/usr/local/lib64",
-				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/local/lib64/libraylib.so",
+				"fragment" : "_deps\\raylib-build\\src\\RelWithDebInfo\\raylib_static.lib",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "-lraylib",
+				"fragment" : "winmm.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "_deps\\raylib-build\\src\\external\\glfw\\src\\RelWithDebInfo\\glfw3.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "RayGame3",
-	"nameOnDisk" : "RayGame3",
+	"nameOnDisk" : "RayGame3.exe",
 	"paths" : 
 	{
 		"build" : ".",
