@@ -1,11 +1,9 @@
 cmake_minimum_required(VERSION 3.15)
 project(RayGame3)
 
-# Linux machine uses installed raylib.
-# Windows machine downloads from github.
-if(UNIX)
-    find_package(raylib 3.5.0 REQUIRED)
-endif()
+#if(UNIX) OLD. This reported raylib as version 2.5.0.
+#    find_package(raylib 3.5.0 REQUIRED)
+#endif()
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
@@ -27,21 +25,24 @@ endif()
 set(CMAKE_CXX_FLAGS_DEBUG "-m64 -g")
 set(CMAKE_CXX_FLAGS_RELEASE "-m64 -O3")
 
-if(WIN32)
-    include(FetchContent)
+# Download raylib from github.
+include(FetchContent)
 
-    FetchContent_Declare(
-            RAYLIB
-            GIT_REPOSITORY "https://github.com/raysan5/raylib"
-            GIT_TAG 3.5.0
-    )
+FetchContent_Declare(
+        RAYLIB
+        GIT_REPOSITORY "https://github.com/raysan5/raylib"
+        GIT_TAG 3.5.0
+)
 
-    FetchContent_GetProperties(RAYLIB)
-    if (NOT raylib_POPULATED)
-        FetchContent_Populate(RAYLIB)
-        add_subdirectory(${raylib_SOURCE_DIR} ${raylib_BINARY_DIR})
-    endif ()
-endif()
+FetchContent_GetProperties(RAYLIB)
+if (NOT raylib_POPULATED)
+    FetchContent_Populate(RAYLIB)
+
+    set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
+    set(BUILD_GAMES    OFF CACHE BOOL "" FORCE) # or games
+
+    add_subdirectory(${raylib_SOURCE_DIR} ${raylib_BINARY_DIR})
+endif ()
 
 add_executable(RayGame3 src/main.cpp src/game/Game.cpp src/game/screen/GameScreen.cpp src/game/screen/PlayScreen.cpp)
 
