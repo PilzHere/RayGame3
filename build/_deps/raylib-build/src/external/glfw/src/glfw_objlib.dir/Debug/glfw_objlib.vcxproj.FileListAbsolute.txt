@@ -1,0 +1,2 @@
+C:\Users\pilzm\CPPProjects\RayGame3\build\_deps\raylib-build\src\external\glfw\src\glfw_objlib.dir\Debug\glfw_objlib.lib
+C:\Users\pilzm\CPPProjects\RayGame3\build\_deps\raylib-build\src\external\glfw\src\glfw_objlib.dir\Debug\glfw_objlib.pdb

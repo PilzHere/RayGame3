@@ -1,0 +1,2 @@
+C:\Users\pilzm\CPPProjects\RayGame3\build\_deps\raylib-build\src\Debug\raylib_static.pdb
+C:\Users\pilzm\CPPProjects\RayGame3\build\_deps\raylib-build\src\raylib_static.dir\Debug\raylib_static.pdb
