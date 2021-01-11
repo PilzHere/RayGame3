@@ -22,8 +22,13 @@ elseif(WIN32)
     set(CMAKE_CXX_FLAGS "-Wall")
 endif()
 
-set(CMAKE_CXX_FLAGS_DEBUG "-m64 -g")
-set(CMAKE_CXX_FLAGS_RELEASE "-m64 -O3")
+if(UNIX)
+    set(CMAKE_CXX_FLAGS_DEBUG "-m64 -g")
+    set(CMAKE_CXX_FLAGS_RELEASE "-m64 -O3")
+elseif(WIN32)
+    set(CMAKE_CXX_FLAGS_DEBUG "-m64 -g")
+    set(CMAKE_CXX_FLAGS_RELEASE "-m64 -O3 -mwindows")
+endif()
 
 # Download raylib from github.
 include(FetchContent)
